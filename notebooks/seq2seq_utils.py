@@ -399,6 +399,7 @@ class Seq2Seq_Inference(object):
         url = df[ref_col].tolist()
 
         demo_list = np.random.randint(low=1, high=len(input_text), size=n)
+        demo_list = [i+1 for i in range(50)]
         for i in demo_list:
             self.print_example(i,
                                input_text=input_text[i],
